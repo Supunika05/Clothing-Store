@@ -1,0 +1,91 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title> Fashion Star | Home </title>
+        <link rel="stylesheet" type="text/css" href="Home.css">
+    </head>
+    <body>
+
+        <header>
+            <h1> FASHION STAR</h1>
+        </header>
+
+        <nav>
+            <ul class="navbar">
+                <li><a href="#">Home</a></li>
+                <li class="dropdown">
+                    <a href="#">Women</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">Saree</a></li>
+                        <li><a href="#">Skirts</a></li>
+                        <li><a href="#">Blouses</a></li>
+                        <li><a href="#">Dresses</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Men</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">Shirts</a></li>
+                        <li><a href="#">Trousers</a></li>
+                        <li><a href="#">Shorts</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Children</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">Shirts</a></li>
+                        <li><a href="#">Shorts</a></li>
+                        <li><a href="#">Skirts</a></li>
+                        <li><a href="#">Blouses</a></li>
+                        <li><a href="#">Dresses</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+        <div class="image-rollover-container">
+            <img class="image-rollover" id="myImage" src="image1.jpg" width="200" height="200" />
+
+            <script>
+                let images = ["dress.jpg", "shirt.jpg", "saree.jpg", "kids.jpg", "kids2.jpg"];
+                let index = 0;
+
+                function changeImage() {
+                    index = (index + 1) % images.length; // Cycle through images
+                    document.getElementById("myImage").src = images[index];
+                }
+
+                // Change image every 5 seconds
+                setInterval(changeImage, 5000);
+            </script>
+        </div>
+        <div class="container">
+            <div class="branches">
+                <h2> Our Branches</h2>
+                <table>
+                    <tr>
+                        <td>Colombo</td>
+                        <td><a href="tel:0112222222">0112222222</a></td>
+                    </tr>
+                    <tr>
+                        <td>Kandy</td>
+                        <td><a href="tel:0814444444">0814444444</a></td>
+                    </tr>
+                    <tr>
+                        <td>Galle</td>
+                        <td><a href="tel:0915555555">0915555555</a></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="sale">
+                <img class="animated-box" src="sale.jpg" alt="Sale Image">
+                <p class="sale-text">Enjoy upto 30% discounts on children's clothes ths month!</p>
+            </div>
+        </div>
+        <div class="social-media">
+            <h2>Find us on:</h2>
+            <a href="https://www.facebook.com/" target="_blank"><img src="fb.png"></a>
+            <a href="https://www.instagram.com/" target="_blank"><img src="instagram.jpg"></a>
+        </div>
+    </body>
+</html>
